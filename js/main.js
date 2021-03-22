@@ -12,11 +12,11 @@ var app = new Vue(
 		},
 		methods: {
 			addItem: function() {
-				if (this.itemInput != '') {
+				if (this.itemInput && this.itemInput.trim()) {
 					this.itemList.push(this.itemInput);
-					this.itemInput = '';
-					this.inputFocus();
 				}
+				this.inputFocus();
+				this.itemInput = '';
 			},
 			delItem: function(index) {
 				this.delList.push({item: this.itemList[index], index});
@@ -50,7 +50,7 @@ var app = new Vue(
 			console.log('---- Vue() created ----');
 			// this.inputFocus(); // qua non va bene, ci vuole mounted()
 		},
-		mounted() {
+		mounted: function() {
 			this.inputFocus(); // qua va bene
 		}
 	}

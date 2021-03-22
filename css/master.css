@@ -99,21 +99,16 @@ button:hover {
 .output_box ul li:hover {
 	background-color: var(--realwhite);
 }
-.output_box ul li .item {
-	/* max-width: 450px; */
-}
 
 /** ITEM CONTROLS **/
 .output_box ul li .list_edit {
 	display: none;
 	position: absolute;
-	top: 50%;
+	top: 0;
 	right: 0;
-	transform: translateY(-50%);
 	z-index: 2;
 	height: 100%;
 	background-color: var(--realwhite);
-	/* margin: 0 5px; */
 }
 .output_box ul li:hover .list_edit {
 	display: block;
@@ -128,6 +123,9 @@ button:hover {
 	cursor: pointer;
 	padding: 5px 5px;
 	/* border: 1px solid red; */
+}
+.output_box ul li .fas:hover:not(.inactive) {
+	color: var(--purple);
 }
 .output_box ul li .inactive {
 	color: var(--black50);

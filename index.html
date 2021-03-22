@@ -40,11 +40,11 @@
 								<div class="item">{{index+1}}. {{item}}</div>
 								<div class="list_edit">
 									<div class="list_edit_box">
-										<i v-if  ="index != 0"                 @click="upItem(index)"   class="fas fa-arrow-up"></i>
-										<i v-else="index != 0"                                          class="fas fa-arrow-up inactive"></i>
-										<i v-if  ="index != itemList.length-1" @click="downItem(index)" class="fas fa-arrow-down"></i>
-										<i v-else="index != itemList.length-1"                          class="fas fa-arrow-down inactive"></i>
-										<i                                     @click="delItem(index)"  class="fas fa-times"></i>
+										<i class="fas fa-arrow-up"            @click="upItem(index)"   v-if ="index != 0" ></i>
+										<i class="fas fa-arrow-up inactive"                            v-else></i>
+										<i class="fas fa-arrow-down"          @click="downItem(index)" v-if ="index != itemList.length-1"></i>
+										<i class="fas fa-arrow-down inactive"                          v-else></i>
+										<i class="fas fa-times"               @click="delItem(index)"></i>
 									</div>
 								</div>
 							</li>
